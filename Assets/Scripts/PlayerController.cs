@@ -17,6 +17,9 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();  
         starterCommand = false;
 
+        //Start Jump
+         rb.velocity = Vector2.up * velocity;
+
     }
 
     // Update is called once per frame
