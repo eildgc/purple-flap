@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
+    AudioSource audioData;
     public GameManagerScript gameManager;
     public float velocity = 1;
     private Rigidbody2D rb;
@@ -15,10 +16,15 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();  
+        audioData = GetComponent<AudioSource>();
         starterCommand = false;
 
         //Start Jump
          rb.velocity = Vector2.up * velocity;
+
+        //Play first falp
+        audioData.Play(0);
+
 
     }
 
@@ -31,6 +37,8 @@ public class PlayerController : MonoBehaviour
         {
             //Jump
             rb.velocity = Vector2.up * velocity;
+            //playFlap
+            audioData.Play(0);
         }
 
         // Touch Controller
@@ -42,6 +50,8 @@ public class PlayerController : MonoBehaviour
             {
                 //Jump
                 rb.velocity = Vector2.up * velocity;
+                //playFlap
+                audioData.Play(0);
             }
         }
     }
