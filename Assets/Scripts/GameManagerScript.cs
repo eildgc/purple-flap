@@ -12,6 +12,8 @@ public class GameManagerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Taco & Ely <3 #taquelyiscanon
+        gameOverCanvas.SetActive(false);
         Time.timeScale = 1;
     }
 
@@ -24,8 +26,7 @@ public class GameManagerScript : MonoBehaviour
 
     public void Replay()
     {
+        //gameOverCanvas.SetActive(false);
         SceneManager.LoadScene(0);
     }
-
-
 }
