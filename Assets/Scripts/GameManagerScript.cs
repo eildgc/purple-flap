@@ -24,9 +24,13 @@ public class GameManagerScript : MonoBehaviour
         Time.timeScale = 0;
     }
 
+    public void GameStart() 
+    {
+        SceneManager.LoadScene(1);
+    }
     public void Replay()
     {
         //gameOverCanvas.SetActive(false);
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 }
