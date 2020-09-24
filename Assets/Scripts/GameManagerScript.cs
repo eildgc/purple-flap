@@ -26,11 +26,12 @@ public class GameManagerScript : MonoBehaviour
 
     public void GameStart() 
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Prep-Scene");
     }
     public void Replay()
     {
         //gameOverCanvas.SetActive(false);
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Game-Title");
     }
+
 }

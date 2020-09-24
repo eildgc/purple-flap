@@ -21,14 +21,15 @@ public class PipeSpawner : MonoBehaviour
     void Update()
     {
         if (timer > maxTime)
-        {
-            GameObject newpipe = Instantiate(pipe);
-            newpipe.transform.position = transform.position + new Vector3(0, Random.Range(-height, height), -1);
-            Destroy(newpipe, 15);
-            timer = 0;
-        }
+            {
+                GameObject newpipe = Instantiate(pipe);
+                newpipe.transform.position = transform.position + new Vector3(0, Random.Range(-height, height), -1);
+                Destroy(newpipe, 15);
+                timer = 0;
+            }
 
         timer += Time.deltaTime;
+        
     }
 }
 

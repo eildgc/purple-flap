@@ -8,20 +8,23 @@ public class PlayerController : MonoBehaviour
     public GameManagerScript gameManager;
     public float velocity = 1;
     private Rigidbody2D rb;
+    public bool starterCommand = false;
 
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();  
+        starterCommand = false;
+
     }
 
     // Update is called once per frame
     void Update()
     {
         
-        // Mouse COntroller
-        if(Input.GetMouseButtonDown(0))
+        // Mouse Controller and keyboard
+        if(Input.GetMouseButtonDown(0) || Input.GetKeyDown("space"))
         {
             //Jump
             rb.velocity = Vector2.up * velocity;
@@ -37,10 +40,7 @@ public class PlayerController : MonoBehaviour
                 //Jump
                 rb.velocity = Vector2.up * velocity;
             }
-
         }
-
-
     }
 
     //Loosing!!!
