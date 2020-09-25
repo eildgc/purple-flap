@@ -11,12 +11,6 @@ AudioSource audioData;
     {
         audioData = GetComponent<AudioSource>();
         audioData.Play(0);
-        DontDestroyOnLoad(this.gameObject);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

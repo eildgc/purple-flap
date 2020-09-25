@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     AudioSource audioData;
     public GameManagerScript gameManager;
     public float velocity = 1;
+    public float angle;
     private Rigidbody2D rb;
     public bool starterCommand = false;
 
@@ -16,7 +17,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();  
-        audioData = GetComponent<AudioSource>();
+        audioData = this.GetComponent<AudioSource>();
         starterCommand = false;
 
         //Start Jump
@@ -54,6 +55,12 @@ public class PlayerController : MonoBehaviour
                 audioData.Play(0);
             }
         }
+    }
+
+    //Create rotation from Up Vector
+    private void FixedUpdate() {
+
+
     }
 
     //Loosing!!!

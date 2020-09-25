@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SFXPlay : MonoBehaviour
 {
-
     AudioSource audioData;
     public void PlaySFX()
     {
