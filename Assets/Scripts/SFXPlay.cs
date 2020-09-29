@@ -5,8 +5,8 @@ using UnityEngine;
 public class SFXPlay : MonoBehaviour
 {
     AudioSource audioData;
-    public void PlaySFX()
-    {
+    public void Start(){
+
         audioData = GetComponent<AudioSource>();
         audioData.Play(0);
     }
